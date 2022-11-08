@@ -1,6 +1,6 @@
 from os import path
 
-from yt-dlp import yt_dlp
+import yt-dlp
 
 from config import DURATION_LIMIT
 from helpers.errors import DurationLimitError
