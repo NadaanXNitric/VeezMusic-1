@@ -11,7 +11,7 @@ import aiofiles
 import aiohttp
 import requests
 import wget
-import yt-dlp
+import youtube_dl
 from pyrogram import Client, filters
 from pyrogram.errors import FloodWait, MessageNotModified
 from pyrogram.types import Message
@@ -54,7 +54,7 @@ def song(client, message):
         return
     m.edit("📥 downloading...")
     try:
-        with yt-dlp.YoutubeDL(ydl_opts) as ydl:
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
