@@ -1,13 +1,12 @@
+import config
 from pyrogram import Client
 from pytgcalls import PyTgCalls
 from pytgcalls.types import Update
 from pytgcalls.types.input_stream import InputAudioStream
 from pytgcalls.types.input_stream import InputStream
+from queues import queues
 
-from config import SESSION_NAME, API_ID, API_HASH
-from . import queues
-
-client = Client(SESSION_NAME, API_ID, API_HASH)
+client = Client(config.SESSION_NAME, config.API_ID, config.API_HASH)
 pytgcalls = PyTgCalls(client)
 
 
