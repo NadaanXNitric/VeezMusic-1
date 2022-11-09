@@ -1,5 +1,5 @@
 from pyrogram import Client
-from pytgcalls import PyTgCalls
+from pytgcalls import GroupCallFactory
 
 from config import SESSION_NAME, API_ID, API_HASH
 from . import queues
